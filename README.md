@@ -2,7 +2,7 @@
 
 **InkSpire** is a full-stack blog platform where users can read and manage tech-related blogs with category filters, pagination, and a clean UI.
 
-**Live API URL**: [https://inkspire-p7wi.onrender.com](https://inkspire-p7wi.onrender.com)
+**Live**: [https://inkspire-p7wi.onrender.com](https://inkspire-p7wi.onrender.com)
 
 ---
 
