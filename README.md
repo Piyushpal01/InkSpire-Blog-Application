@@ -53,7 +53,7 @@ venv\Scripts\activate     # For Windows
 pip install -r requirements.txt
 ```
 
-#### Run the build script
+#### c) Run the build script
 ```
 ./build.sh
 ```
