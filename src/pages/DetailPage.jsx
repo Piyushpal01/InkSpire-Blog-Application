@@ -81,7 +81,7 @@ const DetailPage = ({ username, isAuthenticated }) => {
                 <BlogWriter blog={blog} />
 
 
-                <div className='w-full h-[350px] my-9 overflow-hidden rounded-sm'>
+                <div className='w-full h-[550px] my-9 overflow-hidden rounded-sm'>
                     <img
                         src={`${BASE_URL}${blog.featured_image}`}
                         className='w-full h-full object-cover rounded-sm'
