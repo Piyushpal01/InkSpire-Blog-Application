@@ -22,7 +22,7 @@ const Navbar = ({ darkMode, handleDarkMode, isAuthenticated, username, setIsAuth
   
   return (
     <>
-      <nav className='max-container px-16 py-6 flex justify-evenly items-center gap-10 max-md:gap-20 sticky top-0 z-10 bg-[#FFFFFF] dark:bg-[#090a12]'>
+      <nav className='w-full px-4 sm:px-8 py-4 flex items-center justify-between sticky top-0 z-10 bg-[#FFFFFF] dark:bg-[#090a12]'>
         <Link to="/" className="font-semibold tracking-wider text-[#141624] text-3xl flex mr-12 dark:text-[#FFFFFF]">
           InkSpire
         </Link>
