@@ -40,15 +40,15 @@ cd InkSpire-Blog-App
 ```
 
 ### 2: Backend setup
-```
-#### Create a virtual environment (Optional but recommended)
+
+#### a) Create a virtual environment (Optional but recommended)
 ```
 python -m venv venv
 source venv/bin/activate  # For macOS/Linux
 venv\Scripts\activate     # For Windows
 ```
 
-#### Install dependencies
+#### b) Install dependencies
 ```
 pip install -r requirements.txt
 ```
@@ -56,7 +56,6 @@ pip install -r requirements.txt
 #### Run the build script
 ```
 ./build.sh
-
 ```
 
 ### 3: Frontend setup
