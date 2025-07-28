@@ -7,13 +7,11 @@ export const BASE_URL = import.meta.env.VITE_BASE_URL;
 // main axios instance (ye sab jagah use hoga)
 const api = axios.create({
     baseURL: BASE_URL,
-    withCredentials: true,
 });
 
 // another axios instance without any interceptors, Yeh sirf token refresh ke liye use h — loop se bachne ke liye
 const plainAxios = axios.create({
     baseURL: BASE_URL,
-    withCredentials: true,
 });
 
 // Interceptor: Before every request, check token status
