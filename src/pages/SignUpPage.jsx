@@ -5,7 +5,7 @@ import { useForm } from "react-hook-form"
 import { useMutation, useQueryClient } from "@tanstack/react-query"
 import { registerUser, updateUserProfile } from "@/services/apiBlog"
 import { toast } from "react-toastify"
-import SmallSpinner from "@/ui_components/smallSpinner"
+import SmallSpinner from "@/ui_components/SmallSpinner"
 import { Textarea } from "@/components/ui/textarea"
 
 const SignUpPage = ({ userInfo, updateForm, toggleModal }) => {
