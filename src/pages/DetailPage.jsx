@@ -71,8 +71,18 @@ const DetailPage = ({ username, isAuthenticated }) => {
                         </h2>
                         {isAuthenticated && username === blog.author.username &&
                             <span className="flex gap-4 self-end md:self-auto">
-                                <HiPencilAlt onClick={toggleModal} className="dark:text-white text-3xl cursor-pointer" />
-                                <MdDelete onClick={handleDeleteBlog} className="dark:text-white text-3xl cursor-pointer" />
+                                <span className="relative group">
+                                    <HiPencilAlt onClick={toggleModal} className="dark:text-white text-3xl cursor-pointer" />
+                                    <div className="absolute left-1/2 -translate-x-1/2 -top-9 w-max bg-black text-white text-sm px-3 py-1 rounded opacity-0 group-hover:opacity-100 transition-opacity duration-300 pointer-events-none z-10">
+                                    Edit Post
+                                    </div>
+                                </span>
+                                <span className="relative group">
+                                    <MdDelete onClick={handleDeleteBlog} className="dark:text-white text-3xl cursor-pointer" />
+                                    <div className="absolute left-1/2 -translate-x-1/2 -top-9 w-max bg-black text-white text-sm px-3 py-1 rounded opacity-0 group-hover:opacity-100 transition-opacity duration-300 pointer-events-none z-10">
+                                    Delete Post
+                                    </div>
+                                </span>
                             </span>
                         }
                     </div>

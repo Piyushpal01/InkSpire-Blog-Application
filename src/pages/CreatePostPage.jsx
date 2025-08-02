@@ -16,9 +16,11 @@ import InputError from '@/ui_components/InputError'
 import { useMutation, useQueryClient } from '@tanstack/react-query'
 import { createBlog, updateBlog } from '@/services/apiBlog'
 import { toast } from 'react-toastify'
-import { useNavigate } from 'react-router-dom'
+import { Link, useNavigate } from 'react-router-dom'
 import SmallSpinner from '@/ui_components/SmallSpinner'
 import LoginPage from './LoginPage'
+import { Button } from "@/components/ui/button";
+
 
 const CreatePostPage = ({ blog, isAuthenticated }) => {
 
@@ -187,6 +189,9 @@ const CreatePostPage = ({ blog, isAuthenticated }) => {
 
                     )
                 }
+                <Link to="/">
+            <Button className="cursor-pointer tracking-wider font-semibold mt-6 text-sm ">Back to home &rarr;</Button>
+          </Link>
             </div>
 
         </form>

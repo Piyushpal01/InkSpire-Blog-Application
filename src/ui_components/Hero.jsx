@@ -8,6 +8,7 @@ import { HiPencilAlt } from "react-icons/hi";
 import { FaLinkedin } from "react-icons/fa";
 import { FaGithub } from "react-icons/fa";
 import SocialIcons from "./SocialIcons";
+import ShowProfileAvatar from "./ShowProfileAvatar";
 
 
 const Hero = ({ userInfo, authUsername, toggleModal }) => {
@@ -17,12 +18,16 @@ const Hero = ({ userInfo, authUsername, toggleModal }) => {
         <div className='px-6 py-9 max-container flex flex-col items-center justify-center gap-4 bg-[#F6F6F7] dark:bg-[#090a12] rounded-md'>
             <div className='flex gap-4'>
                 {/* Profile pic */}
-                <div className='w-[70px] h-[70px] rounded-full overflow-hidden'>
-                    <img
-                        src={`${BASE_URL}${userInfo?.profile_pic}`}
-                        className='w-full h-full rounded-full object-cover'
-                    />
-                </div>
+                {userInfo.profile_pic ? (
+                    <div className='w-[70px] h-[70px] rounded-full overflow-hidden'>
+                        <img
+                            src={`${BASE_URL}${userInfo?.profile_pic}`}
+                            className='w-full h-full rounded-full object-cover'
+                        />
+                    </div>
+                ) : (<ShowProfileAvatar />)}
+                
+                
 
                 {/* Name and Title */}
                 <span>

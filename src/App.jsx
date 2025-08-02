@@ -10,6 +10,7 @@ import ProtectedRoute from './ui_components/ProtectedRoute'
 import { useEffect, useState } from 'react'
 import { getUsername } from './services/apiBlog'
 import NotFoundPage from './pages/NotFoundPage'
+import AboutPage from './pages/AboutPage'
 
 
 function App() {
@@ -52,6 +53,7 @@ function App() {
           >
             {/* Nested Routes */}
             <Route index element={<HomePage />} />
+            <Route path='about' element={<AboutPage />} />
             <Route path='profile/:username' element={<ProfilePage authUsername={username} />} />
             <Route path='profile/:username/blogs/:slug' element={<DetailPage />} />
             <Route path='blogs/:slug' element={<DetailPage isAuthenticated={isAuthenticated} username={username} />} />

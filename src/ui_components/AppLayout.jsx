@@ -20,6 +20,15 @@ const AppLayout = ({ isAuthenticated, username, setIsAuthenticated, setUsername 
   const [darkMode, setdarkMode] = useState(localStorage.getItem("dark") === 'true')
   // localStorage.getItem("dark") === 'true' --> if this condition is true then dark mode is on, if not then dark mode is off
 
+    useEffect(() => {
+    if (darkMode) {
+      document.documentElement.classList.add("dark");
+    } else {
+      document.documentElement.classList.remove("dark");
+    }
+  }, [darkMode]);
+
+
   const handleDarkMode = () => {
     const newDarkMode = !darkMode
     setdarkMode(newDarkMode)

@@ -2,10 +2,10 @@
 
 import api from "@/api"
 
-// fn to fetch our blogs
+// fn to fetch our blogs, can fetch also through category
 export async function getBlogs(page) {
     try {
-        const response = await api.get(`blog_list?page=${page}`);   // blog list is the endpoint from where we're fetching all blogs.
+        const response = await api.get(`blogs?page=${page}`);   // blog list is the endpoint from where we're fetching all blogs.
         return response.data;
     } catch (error) {
         throw new Error(error.message);
@@ -15,7 +15,7 @@ export async function getBlogs(page) {
 // fn to get particular blog detail
 export async function getBlog(slug) {
     try {
-        const response = await api.get(`blogs/${slug}`);
+        const response = await api.get(`blog/${slug}`);
         return response.data;
     } catch (error) {
         throw new Error(error.message);
@@ -158,3 +158,15 @@ export async function updateUserProfile(data) {
     }
 }
 
+// get blogs through category
+export async function getBlogsByCategory(category) {
+    try {
+        const response = await api.get(`blogs/?category=${category}`);
+        return response.data;
+    } catch (error) {
+        if (error.response) {
+            throw new Error(error.response?.data.message || "Failed to fetch blogs!!");
+        }
+        throw new Error(error.message);
+    }
+}
