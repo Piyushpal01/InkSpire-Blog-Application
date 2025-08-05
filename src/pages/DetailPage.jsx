@@ -24,7 +24,7 @@ const DetailPage = ({ username, isAuthenticated }) => {
         queryFn: () => getBlog(slug)
     })
 
-    // console.log(blog);
+    console.log(blog);
     const blogId = blog?.id;
 
     const toggleModal = () => {
@@ -97,7 +97,7 @@ const DetailPage = ({ username, isAuthenticated }) => {
                         className='w-full h-full object-cover rounded-sm'
                     />
                 </div>
-                <p className='text-[1rem] leading-[2rem] text-justify text-[#3B3C4A] dark:text-[#BABABF]'>
+                <p className='text-[1rem] leading-[2rem] text-justify break-words overflow-hidden text-[#3B3C4A] dark:text-[#BABABF]'>
                     {/* Lorem ipsum dolor sit, amet consectetur adipisicing elit. Eum nostrum deserunt ea et aut eveniet rerum debitis. Pariatur ea, architecto minima similique distinctio voluptas odio sequi ipsam labore consectetur culpa, nemo placeat vel eum soluta. Suscipit nisi enim quas ab error dolorem iusto voluptate expedita corporis sequi mollitia cupiditate eius ea natus molestiae rerum facere, consectetur beatae laudantium temporibus totam itaque quisquam voluptas. Dicta inventore aperiam consequatur sit fugit. Beatae magnam, necessitatibus excepturi consectetur corporis illo aperiam harum cupiditate distinctio impedit consequatur? Omnis doloribus vel perferendis reiciendis possimus veritatis laudantium in, assumenda provident dicta quisquam perspiciatis iusto tenetur dolorum consequuntur? */}
                     {blog.content}
                 </p>
