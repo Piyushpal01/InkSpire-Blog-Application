@@ -6,7 +6,7 @@ import { Link } from 'react-router-dom'
 import { FaUserCircle } from 'react-icons/fa'
 
 const BlogWriter = ({ blog }) => {
-    console.log(blog)
+    // console.log(blog)
   return (
     <Link to={`/profile/${blog.author.username}`} className='inline-block'>
         <div className='flex items-center gap-4 '>
