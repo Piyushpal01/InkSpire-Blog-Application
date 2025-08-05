@@ -24,7 +24,7 @@ const DetailPage = ({ username, isAuthenticated }) => {
         queryFn: () => getBlog(slug)
     })
 
-    console.log(blog);
+    // console.log(blog);
     const blogId = blog?.id;
 
     const toggleModal = () => {
